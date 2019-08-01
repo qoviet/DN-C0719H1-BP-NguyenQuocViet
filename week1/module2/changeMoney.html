@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    Amount:<br>
+    <input type="text" id="money"><br> From Curency:<br>
+    <select id="fromCurrent">
+ <option value="usd">USD</option>
+  <option value="vnd">VND</option>
+ 
+  <select><br>
+  To Curency:<br>
+  <select id="toCurrent">
+ <option value="vnd">VND</option>
+  <option value="usd">USD</option>
+ 
+  <select><br>
+
+<input type="button" value="Convert" onclick="changeMoney()">
+    <input type="reset">
+    <p id="result"></p>
+    <p> Click nút "Convert" để đổi tiền .</p>
+
+    <script>
+        function changeMoney() {
+            let money = parseInt(document.getElementById("money").value);
+            let toCurrent=document.getElementById("toCurrent").value;
+            let fromCurrent=document.getElementById("fromCurrent").value;
+            if(fromCurrent=="usd" && toCurrent=="vnd") {
+                let dolamy = money*23000;
+                document.getElementById("result").innerHTML = dolamy;
+            }
+            if(fromCurrent=="vnd" && toCurrent=="usd") {
+                let vietnamdong= money/23000;
+                document.getElementById("result").innerHTML = vietnamdong;
+            }
+
+        }
+    </script>
+    <p>
+  
+</body>
+</html>

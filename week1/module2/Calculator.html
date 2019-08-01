@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset = "UTF-8">
+    <title>Caculator</title>
+</head>
+
+<body>
+    <form>
+        <p>Caculator</p>
+        <input type="text" id="o1"> <br>
+        <input type="text" id="o2"> <br>
+
+
+        <input type="button" value="Addition(+)" onclick="phepCong()"> </input>
+        <input type="button" value="Subtraction(-)" onclick="phepTru()"> </input>
+        <input type="button" value="Multiplication(*)" onclick="phepNhan()"> </input>
+        <input type="button" value="Division(/)" onclick="phepChia()"> </input>
+        </br >
+        	<p3 id="result"></p3>
+        <script> 
+        function phepCong() {
+       		 let o1 = parseInt(document.getElementById("o1").value);
+             let o2 = parseInt(document.getElementById("o2").value);
+             	let TC = o1 + o2;
+                document.getElementById("result").innerHTML = "Result: " + TC;
+                
+        }
+        </script>
+        <script> 
+        function phepTru() {
+       		 let o1 = parseInt(document.getElementById("o1").value);
+             let o2 = parseInt(document.getElementById("o2").value);
+             	let TT = o1 - o2;
+                document.getElementById("result").innerHTML = "Result: " + TT;
+                
+        }
+        </script>
+        <script> 
+        function phepNhan() {
+       		 let o1 = parseInt(document.getElementById("o1").value);
+             let o2 = parseInt(document.getElementById("o2").value);
+             	let TN = o1 * o2;
+                document.getElementById("result").innerHTML = "Result: " + TN;
+                
+        }
+        </script>
+        <script> 
+        function phepChia() {
+       		 let o1 = parseInt(document.getElementById("o1").value);
+             let o2 = parseInt(document.getElementById("o2").value);
+             	let TCH = o1 / o2;
+                document.getElementById("result").innerHTML = "Result: " + TCH;
+                
+        }
+        </script>
+    </form>
+</body>
+
+</html>
