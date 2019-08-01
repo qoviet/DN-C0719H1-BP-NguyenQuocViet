@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>So NT</title>
+</head>
+<body>
+
+<script>
+	//Coi thu xem no phai la number khong
+	function ktNguyenTo(number){
+		var checknumber = true;
+		if(number<2){checknumber = false;}
+		else if(number==2){checknumber = true;}
+		else if(number % 2 == 0){checknumber = false;}
+		else {
+			for (var i = 3; i <= Math.sqrt(number); i += 2){
+				if (number % i == 0) {
+					checknumber = false;
+					break;
+				}
+			}
+		}
+		return checknumber;
+	}
+	//In ra toan bo number da check
+	function innumber(){
+		//let total For = 0;
+		var soNhap = document.getElementById("soNhap").value;
+		soNhap = parseInt(soNhap);
+		var html = '';
+		//total For ++;
+		for (var i = 1; i <= soNhap; i++) {
+			if (ktNguyenTo(i)){
+				html += i + ' ';
+			}
+        }
+        document.getElementById("show").innerHTML = html;
+		//alert(total For);
+	}
+</script>
+
+	<form id="formdangnhap">
+		<table width="500" height="200" border="1" cellpadding="3" align="center">
+		
+			<tr>
+				<th colspan="2"> Tìm Số Nguyên Tố Nhỏ Hơn Số Đã Nhập </th>
+			</tr>
+
+			<tr>
+				<td> Nhập một số </td>
+				<td> <input id="soNhap" type="text" size="25px">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" id="login" value="Xử lý" onclick="innumber()"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<div id="show"></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+

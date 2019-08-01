@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>Nh?p N</head>
+
+<body>
+    <input type="text" id="number" /> <br>
+    <button onclick="search()">Search</button>
+    <p id="result"></p>
+    <!--cach 2-->
+    <script>
+        let totalFor = 0;
+        function checkSNT(value) {
+            let count = 0;
+            for (let i = 2; i <= Math.sqrt(value); i++) {
+                totalFor++;
+                if (value % i == 0)
+                    return false;
+            }
+            return true;
+        }
+        function search() {
+
+            let number = document.getElementById("number");
+            let result = document.getElementById("result");
+            let drawhtml = "";
+            let count = 0; let i = 2;
+            if (number.value == "") {
+                result.innerText = "du lieu khong xac dinh";
+                result.style = "color:red";
+                number.style = "border: 1px solid red";
+                number.focus();
+            }
+            else if (isNaN(number.value)) {
+                result.innerText = "du lieu nhao vao ko dung";
+
+            }
+            else if (parseInt(number.value) < 1) {
+                result.innerText = "vui long nhap vao so lon hon 0";
+            }
+
+            else {
+                while (true) {
+
+                    if (checkSNT(i)) {
+                        count++;
+                        drawhtml += i + "  ";
+                    }
+                    i++;
+                    if (count == number.value) {
+                        break;
+
+                    }
+                }
+                result.innerText = drawhtml;
+                alert(totalFor);
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <!-- cach 1-->
+    <!-- <script>
+        function checkSNT(value) {
+            let count = 0;
+            for (let i = 1; i <= value; i++) {
+                if (value % i == 0)
+                    count++;
+            }
+            if (count == 2)
+                return true;
+            return false;
+        }
+        function search() {
+            let totalFor =0;
+            let number = document.getElementById("number");
+            let result =  document.getElementById("result");
+            let drawhtml = "";
+            let count = 0; let i = 2;
+            if(number.value == ""){
+                result.innerText = "du lieu khong xac dinh";
+                result.style = "color:red";
+                number.style = "border: 1px solid red";
+                number.focus();
+            }
+            else if (isNaN(number.value)) {
+                result.innerText = "du lieu nhao vao ko dung";
+
+            }
+            else if(parseInt(number.value)<1){
+                result.innerText = "vui long nhap vao so lon hon 0";
+            }
+
+            else {
+                while (true) {
+                    totalFor +=i;
+                    if (checkSNT(i)) {
+                        count++;
+                        drawhtml += i + "  ";
+                    }
+                    i++;
+                    if (count == number.value) {
+                        break;
+
+                    }
+                }
+                result.innerText = drawhtml;
+                alert(totalFor);
+            }
+        }
+
+    </script> -->
+
+
+
+</body>
+
+</html>
