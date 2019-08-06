@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Tổng Fibonacci</title>
+</head>
+
+<body>
+    <h3>Bt5: Hiển thị ra tổng 20 số đầu tiên trong dãy fibonacci .</h3>
+    <p id="hienthi"></p>
+    <script>
+        let x = 1;
+        let y = 0;
+        let S = 0;
+        let step = 1;
+        let show = "";
+        let sum = 0;
+        for (; step <= 20; step++) {
+            S = S + y;
+            y = x;
+            x = S;
+            sum = sum + S;
+            show += S + "<br>";
+        }
+        document.getElementById("hienthi").innerHTML = show + "Tổng dãy số trên là: " + sum;
+    </script>
+</body>
+
+</html>

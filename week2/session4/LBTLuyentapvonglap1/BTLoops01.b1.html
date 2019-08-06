@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Đếm 1 đến 100</title>
+</head>
+
+<body>
+    <p id="hienthi"></p>
+    <script>
+        window.onload = dem100();
+
+        function dem100() {
+            let i = 0;
+            let show = "";
+            for (i = 1; i <= 99; i++) {
+                show += "<p>" + i + "</p>";
+            }
+            document.getElementById("hienthi").innerHTML = show + "DONE";
+            //document.write("DONE");
+        }
+    </script>
+</body>
+
+</html>

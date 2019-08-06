@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Sum / 7</title>
+</head>
+
+<body>
+    <h3>Bt6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>
+    <p id="hienthi"></p>
+    <script>
+        window.onload = function chiahet7() {
+            let x = 7;
+            let step = 1;
+            let sum = 0;
+            let y = 1;
+            let show = "";
+            for (; step <= 30; step++) {
+                y = x * step;
+                sum += y;
+                show += y + "<br>";
+            }
+            console.log(sum);
+            document.getElementById("hienthi").innerHTML = "Các số chia hết cho 7 là: <br> " + show + "Tổng là :" + sum;
+
+        }
+    </script>
+</body>
+
+</html>

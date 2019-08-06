@@ -4,8 +4,9 @@
 
 <body>
     <meta=c harset="UTF-8">
+        <!-- cách1 -->
 
-        <h2>Chuyển đổi ĐỘ dài</h2>
+        <!-- <h2>Chuyển đổi ĐỘ dài</h2>
         <p>Nhập vào độ dài feet để đổi ra mét: </p>
 
         <p>
@@ -18,7 +19,36 @@
             function ChuyenDoi(valNum) {
                 document.getElementById("outputMeters").innerHTML = valNum / 3.2808;
             }
+        </script> -->
+
+
+        <p>Chuyển đổi giữa feet và meters</p>
+        <p>
+            <input id="nhapNumber" type="number">
+            <input type="button" value="chuyen sang Feet" onclick="chuyenDoiFeet()">
+            <input type="button" value="Chuyen sang Meters" onclick="mainChuyenDoiMeters()">
+        </p>
+        <p id="traKQ"></p>
+        <script>
+            function chuyenDoiFeet() {
+                let n = document.getElementById("nhapNumber").value;
+                let f = n * 3.279;
+                document.getElementById("traKQ").innerHTML = f + "feet";
+            }
+
+            function chuyenDoiMeters(b) {
+                let m = b * 0.305;
+                console.log(m + "abc")
+                return m;
+            }
+
+            function mainChuyenDoiMeters() {
+                let n = document.getElementById("nhapNumber").value;
+                let m = chuyenDoiMeters(n);
+                document.getElementById("traKQ").innerHTML = m + "meters";
+            }
         </script>
+
 </body>
 
 </html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>FIZZBUZZ</title>
+</head>
+
+<body>
+    <h3>Bt7: Viết ct in ra các số từ 1 đến 100.</h3>
+    <h3>Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. </h3>
+    <h3>Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h3>
+    <p id="hienthi"></p>
+    <script>
+        let show = "";
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0)
+                show += "FizzBuzz<br>";
+            else if (i % 5 == 0)
+                show += "Buzz<br>";
+            else if (i % 3 == 0)
+                show += "Fizz<br>";
+            else show += i + "<br>";
+        }
+        document.getElementById("hienthi").innerHTML = show;
+    </script>
+</body>
+
+</html>

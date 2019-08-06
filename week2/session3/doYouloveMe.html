@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Do you love me?</title>
+</head>
+
+<body>
+    <h1>DO YOU LOVE ME?</h1>
+    <button type="button" onclick="yes()" id="idyes">YES</button>
+    <button type="button" onmouseover="no()" id="idno">NO</button>
+    <script>
+        function yes() {
+            alert("yes, <3!");
+        }
+
+        function no() {
+            let rdX = Math.floor(Math.random() * 700) + 10;
+            let rdY = Math.floor(Math.random() * 1000) + 10;
+            //alert(window.innerHeight);
+            //alert(window.innerWidth);
+            document.getElementById("idno").style.position = "absolute";
+            document.getElementById("idno").style.left = rdX + "px";
+            document.getElementById("idno").style.top = rdY + "px";
+        }
+    </script>
+</body>
+
+</html>

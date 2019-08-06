@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <h3>B4: Hiển thị ra số trong dãy fibonacci đầu tiên chia hết cho 5.</h3>
+    <p id="hienthi"></p>
+    <script>
+        let x = 1;
+        let y = 0;
+        let S = 0;
+        let step = 1;
+        let show = "";
+        let sum = 0;
+        for (; step <= 20; step++) {
+            S = S + y;
+            y = x;
+            x = S;
+            if (S % 5 == 0 && S != 0)
+                break;
+        }
+        document.getElementById("hienthi").innerHTML = S;
+    </script>
+</body>
+
+</html>

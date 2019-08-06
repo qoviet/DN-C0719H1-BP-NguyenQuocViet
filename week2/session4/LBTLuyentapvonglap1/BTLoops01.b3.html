@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Dãy Fibonacci</title>
+</head>
+
+<body>
+    <h3>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h3>
+    <p id="hienthi"></p>
+    <script>
+        let x = 1;
+        let y = 0;
+        let S = 0;
+        let step = 1;
+        let show = "";
+        for (; step <= 20; step++) {
+            S = S + y;
+            y = x;
+            x = S;
+            show += S + "<br>";
+        }
+        document.getElementById("hienthi").innerHTML = show;
+    </script>
+</body>
+
+</html>
