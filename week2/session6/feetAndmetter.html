@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Feet to Meters Length Converter</title>
+
+<body>
+    <meta=c harset="UTF-8">
+
+        <h2>Chuyển đổi ĐỘ dài</h2>
+        <p>Nhập vào độ dài feet để đổi ra mét: </p>
+
+        <p>
+            <label>Feet</label>
+            <input id="inputFeet" type="number" placeholder="Feet -> Meters" oninput="ChuyenDoi(this.value)" onchange="ChuyenDoi(this.value)">
+        </p>
+        <p>Meters: <span id="outputMeters"></span></p>
+
+        <script>
+            function ChuyenDoi(valNum) {
+                document.getElementById("outputMeters").innerHTML = valNum / 3.2808;
+            }
+        </script>
+</body>
+
+</html>
