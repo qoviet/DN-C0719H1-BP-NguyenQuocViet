@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Nhập vào đối số</h1>
+    <input id="nhapNumber1" type="number">
+    <input id="nhapNumber2" type="number">
+    <input type="button" value="Kiểm Tra" onclick="kiemTra()">
+    <p id="traKQ1"></p>
+    </br>
+    <p id="traKQ2"></p>
+    <script>
+        function tangGT(a) {
+            let f = a + 1;
+            return (f);
+        }
+
+        function kiemTra() {
+            let n = parseInt(document.getElementById("nhapNumber1").value);
+            let f = tangGT(n);
+            document.getElementById("traKQ1").innerHTML = f;
+            let m = parseInt(document.getElementById("nhapNumber2").value);
+            let g = tangGT(m);
+            document.getElementById("traKQ2").innerHTML = g;
+        }
+    </script>
+</body>
+
+</html>

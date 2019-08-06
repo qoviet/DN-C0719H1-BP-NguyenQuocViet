@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Star Name</h1>
+    <input id="nhapTenNS" type="">
+    <input type="button" value="Tìm Kiếm" onclick="kiemTra()">
+    <p id="traKQ"></p>
+    </br>
+    <script>
+        function mainKiemTra(a, arr0, arr00) {
+            for (var i = 0; i < arr0.length; i++) {
+                if (a == arr0[i]) {
+                    f = arr0[i] + " " + arr00[i];
+                    return f;
+                }
+            }
+            return ("Không Tìm Thấy Ngôi Sao")
+        }
+
+        function kiemTra() {
+            let name = document.getElementById("nhapTenNS").value;
+            let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            let f = mainKiemTra(name, arr1, arr2);
+            document.getElementById("traKQ").innerHTML = f;
+        }
+    </script>
+
+</body>
+
+</html>
